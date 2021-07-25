@@ -1,0 +1,68 @@
+{
+    "name": "aiida-abacus",
+    "author": "PorYoung",
+    "author_email": "poryoung@outlook.com",
+    "description": "workflow for abacus",
+    "url": "https://github.com/PorYoung/aiida-abacus",
+    "license": "MIT",
+    "classifiers": [
+        "Programming Language :: Python",
+        "Intended Audience :: Science/Research",
+        "License :: OSI Approved :: MIT License",
+        "Natural Language :: English",
+        "Framework :: AiiDA"
+    ],
+    "version": "0.1.0a0",
+    "entry_points": {
+        "aiida.data": [
+            "abacus = aiida_abacus.data.parameters:AbacusParameters"
+        ],
+        "aiida.calculations": [
+            "abacus.base = aiida_abacus.calculations.base:BaseCalculation"
+        ],
+        "aiida.workflows": [
+            "abacus.relax = aiida_abacus.workflows.relax:RealxWorkChain"
+        ],
+        "aiida.parsers": [
+            "abacus = aiida_abacus.parsers:DiffParser"
+        ],
+        "aiida.cmdline.data": [
+            "abacus = aiida_abacus.cli:data_cli"
+        ],
+        "console_scripts": [
+            "aiida-abacus = aiida_abacus.cli:cmd_root"
+        ]
+    },
+    "include_package_data": true,
+    "setup_requires": [
+        "reentry"
+    ],
+    "reentry_register": true,
+    "install_requires": [
+        "aiida-core>=1.1.0,<2.0.0",
+        "sqlalchemy<1.4",
+        "six",
+        "psycopg2-binary<2.9",
+        "voluptuous",
+        "ase"
+    ],
+    "extras_require": {
+        "testing": [
+            "pgtest~=1.3.1",
+            "wheel~=0.31",
+            "coverage",
+            "pytest~=6.0",
+            "pytest-cov"
+        ],
+        "pre-commit": [
+            "pre-commit~=2.2",
+            "pylint>=2.5.0,<2.9"
+        ],
+        "docs": [
+            "sphinx",
+            "sphinxcontrib-contentui",
+            "sphinxcontrib-details-directive; python_version>='3.0'",
+            "sphinx-rtd-theme"
+        ]
+    }
+}

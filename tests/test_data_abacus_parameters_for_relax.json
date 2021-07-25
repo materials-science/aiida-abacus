@@ -1,0 +1,16 @@
+{
+    "calculation": "relax",
+    "niter": 40,
+    "nspin": 1,
+    "nstep": 100,
+    "basis_type": "pw",
+    "ks_solver": "cg",
+    "move_method": "cg",
+    "smearing": "gauss",
+    "sigma": 0.01,
+    "mixing_type": "plain",
+    "mixing_beta": 0.7,
+    "out_stru": 1,
+    "nbands_factor": 1.0,
+    "kpoints_mesh_density": 0.4
+}
