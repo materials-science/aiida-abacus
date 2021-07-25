@@ -5,7 +5,7 @@
 
 # aiida-abacus
 
-workflow for abacus
+workflow for abacus [**Notice: Designed by Group 4 for the DeepModeling Hackathon2021**]
 
 This plugin is the default output of the
 [AiiDA plugin cutter](https://github.com/aiidateam/aiida-plugin-cutter),
